@@ -13,9 +13,10 @@ c("John", "Mary")[[1]]
 *'[ ]'retrieve multiple elements
 
 ```{r}
-list("John", 178, TRUE)[[1]]
-list("John", 178, TRUE)[[2]]
-list("John", 178, TRUE)[[3]]
+typeof(list("John", 178, TRUE)[[1]])
+typeof(list("John", 178, TRUE)[[2]])
+typeof(list("John", 178, TRUE)[[3]])
+typeof(list("John", 178, TRUE)[3])
 ```
 
 ```{r}

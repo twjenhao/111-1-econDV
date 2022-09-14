@@ -1,0 +1,70 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+```{r}
+example1 <- c("John", "Mary", "Bill")
+```
+
+```{r}
+example1[[2]]
+example1[[4]]
+example1[[4]] <- "Ken"
+```
+
+```{r}
+example1[[4]]
+```
+```{r}
+example1[["person5"]] <- "Jane"
+```
+```{r}
+example1[[6]]
+example1[[6]] <- c("person6"="Kenny")
+#可發現右手邊取element name，沒有效果，可以比較person5
+```
+```{r}
+example1
+```
+```{r}
+example1[c(7, 8)]
+example1[c(1, 2)]
+example1[c(7, 8)] <- c("Ellison", "David")
+```
+
+```{r}
+example1
+```
+```{r}
+example1[c("person9", "person10")] <- c("Andy", "Candy")
+```
+
+```{r}
+example1 #有element name，只要取的東西不存在，則就會新增
+```
+
+```{r}
+example1[c(1, 11)] <- c("Johnny", "Grill")
+#新增加上取代
+```
+
+```{r}
+JohnsFamily <-
+  list(
+    name = "John", 
+    age = 35,
+    spouse = list(
+      name = "Mary", 
+      age = 32),
+    children = list(
+      list(
+        name = "Bill", 
+        age = 5),
+      list(
+        name = "Jane", 
+        age = 3)
+    )
+  )
+```
+
+

@@ -163,6 +163,7 @@ c(35) - 15
 ˆ
 ```{r}
 Johnsfamily["age"] - 15#error
+typeof(Johnsfamily["age"])
 list( age = 35) - 15
 #Error in Johnsfamily["age"] - 15 : non-numeric argument to binary operator
 ```
@@ -286,7 +287,10 @@ threeKidsCopy
 c("Tom", "Marry", "Tom")
 ```
 ```{r}
-c("Tom", "Marry", "Tom")[3]
+c("Tom", "Marry", "Tom")[3] -> "Ammy"
+```
+```{r}
+
 ```
 
 ```{r}
