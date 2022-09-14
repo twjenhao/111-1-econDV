@@ -1,0 +1,33 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+```{r}
+"hello"
+
+```
+```{r}
+"Hello"
+```
+```{r}
+c("Hello",2)
+```
+
+```{r}
+2+5
+```
+
+```{r}
+c(TRUE, TRUE, F)
+```
+```{r}
+list("Hello",2)
+```
+
+```{r}
+c(2, 3, 4) + c(3, 5, 5)
+```
+
+
+*file:///Users/liurenhao/Desktop/class1/notebook/%E7%AC%AC%E4%B8%80%E8%AA%B2.nb.html*
+

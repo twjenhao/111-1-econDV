@@ -1,0 +1,146 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+*'[[]]'retrieve One element
+
+```{r}
+c("John", "Mary")[[1]]
+
+```
+
+*'[ ]'retrieve multiple elements
+
+```{r}
+list("John", 178, TRUE)[[1]]
+list("John", 178, TRUE)[[2]]
+list("John", 178, TRUE)[[3]]
+```
+
+```{r}
+length(
+  list("John", 178, TRUE)
+)
+```
+
+
+
+```{r}
+#binding
+biglist = list("John", 178, list("Mary",35))
+
+biglist #name call
+list("John", 178, list("Mary",35))
+
+#下方兩個相同意思
+biglist[[3]][[2]]
+list("John", 178, list("Mary",35))[[3]][[2]]
+```
+
+```{r}
+list("John", 178, list("Mary",35))[[3]]#先萃取list("Mary",35)
+list("Mary",35)[[2]]#才萃取35
+```
+
+```{r}
+list("John", 178, list("Mary",35))[[3]] -> biglist
+biglist <- list("John", 178, list("Mary",35))[[3]]
+#相同意思
+```
+
+```{r}
+#binding
+element1 <- "a"
+element2 <- "b"
+
+c(element1, element2) # there are two name calls
+#跟下下面一行相等
+c("a", "b")
+
+c("elements", "element2") # two character values
+```
+
+```{r}
+c(c("a", "b"), c("c", "d"))[[1]]
+c(c("a", "b"), c("c", "d"))[[2]]
+c(c("a", "b"), c("c", "d"))[[3]]
+c(c("a", "b"), c("c", "d"))[[4]]
+#list不會打散
+list(c("a", "b"), c("c", "d"))[[1]]
+list(c("a", "b"), c("c", "d"))[[2]]
+list(c("a", "b"), c("c", "d"))[[3]] # Error，因為沒有第三個元素值
+```
+
+
+```{r}
+#萬一想取出3
+list(c("a", "b"), c("c", "d"))[[2]][[2]]#list跟c不一樣，c會打散，list不會
+```
+```{r}
+c(c("a", "b"),c("c", "d"))[[2]][[2]]#error，因為c會打散
+```
+
+```{r}
+c(54, 32, 28, 20) # age
+c("male", "female", "female", "male") # gender
+c("north", "south", "east", "east") # residence
+c(100, 25, NA, 77) # income
+```
+
+```{r}
+age = c(54, 24, 38, 20)
+income = c(100, 25, NA, 77) # NA - not available
+```
+
+```{r}
+list(
+  list(54, "male", "north", 100), # (1)
+  list(32, "female", "south", 25), # (2)
+  list(28, "female", "east", NA), # (3)
+  list(20, "male", "east", 77) # (4)
+)
+
+c(
+  list(54, "male", "north", 100), # (1)
+  list(32, "female", "south", 25), # (2)
+  list(28, "female", "east", NA), # (3)
+  list(20, "male", "east", 77) # (4)
+)#不可以用c因為c會打散再重新編排，這樣會遺失之前的資料結構
+```
+
+```{r}
+#2.12命名元素值
+# atomic vector
+c("John"=177, "Mary"=160, "Bill"=170)
+
+# list
+list("John"=177, "Mary"=160, "Bill"=170)
+list(177. "AB")
+list("height"=177, "bloodtype"="AB")
+```
+
+```{r}
+list(John=177, Mary=160, Bill=170)#不需要打雙引號，正宗打法一定要打雙引號（R的彈性)
+list(height=177, "bloodtype"="AB")#height因為是正規命名，所以可以不打雙引號，但血型並不是正規格式，所以需要打雙引號
+list(height=177, `bloodtype`="AB")#或是可以用返頓點，但他並不是在做binding
+list(height=177, "bloodtype"->"AB")#這樣不會給錯誤訊息，但是這樣表達的方法並不是在做上面事情，而是在做binding，且binding完全不需要做雙引號
+```
+
+
+```{r}
+list("John"=177, "Mary"=160, "Bill"=170)[[2]]
+list("John"=177, "Mary"=160, "Bill"=170)[["Mary"]]
+list("John"=177, "Mary"=160, "Bill"=170)[[Mary]]#error
+```
+
+
+
+
+
+
+
+
+
+
+
