@@ -1771,173 +1771,344 @@ pre code {
 <p>*’[[]]’retrieve One element</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYyhcIkpvaG5cIiwgXCJNYXJ5XCIpW1sxXV1cblxuYGBgIn0= -->
-<pre class="r"><code>c(&quot;John&quot;, &quot;Mary&quot;)[[1]]
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuYyhcXEpvaG5cXCwgXFxNYXJ5XFwpW1sxXV1cblxuYGBgXG5gYGAifQ== -->
+<pre class="r"><code>```r
+c(\John\, \Mary\)[[1]]
+</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+*&#39;[ ]&#39;retrieve multiple elements
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlzdChcIkpvaG5cIiwgMTc4LCBUUlVFKVtbMl1dXG5cbmBgYCJ9 --&gt;
+
+```r
+list(&quot;John&quot;, 178, TRUE)[[2]]
 </code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>*’[ ]’retrieve multiple elements</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlzdChcIkpvaG5cIiwgMTc4LCBUUlVFKVtbMV1dXG5saXN0KFwiSm9oblwiLCAxNzgsIFRSVUUpW1syXV1cbmxpc3QoXCJKb2huXCIsIDE3OCwgVFJVRSlbWzNdXVxuYGBgIn0= -->
-<pre class="r"><code>list(&quot;John&quot;, 178, TRUE)[[1]]
-list(&quot;John&quot;, 178, TRUE)[[2]]
-list(&quot;John&quot;, 178, TRUE)[[3]]</code></pre>
-<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDE3OFxuIn0= -->
+<pre><code>[1] 178</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGVuZ3RoKFxuICBsaXN0KFwiSm9oblwiLCAxNzgsIFRSVUUpXG4pXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGVuZ3RoKFxuICBsaXN0KFwiSm9oblwiLCAxNzgsIFRSVUUpXG4pXG5cbmBgYCJ9 -->
 <pre class="r"><code>length(
   list(&quot;John&quot;, 178, TRUE)
-)</code></pre>
+)
+</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDNcbiJ9 -->
+<pre><code>[1] 3</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI2JpbmRpbmdcbmJpZ2xpc3QgPSBsaXN0KFwiSm9oblwiLCAxNzgsIGxpc3QoXCJNYXJ5XCIsMzUpKVxuXG5iaWdsaXN0ICNuYW1lIGNhbGxcbmxpc3QoXCJKb2huXCIsIDE3OCwgbGlzdChcIk1hcnlcIiwzNSkpXG5cbiPkuIvmlrnlhanlgIvnm7jlkIzmhI/mgJ1cbmJpZ2xpc3RbWzNdXVtbMl1dXG5saXN0KFwiSm9oblwiLCAxNzgsIGxpc3QoXCJNYXJ5XCIsMzUpKVtbM11dW1syXV1cbmBgYCJ9 -->
-<pre class="r"><code>#binding
-biglist = list(&quot;John&quot;, 178, list(&quot;Mary&quot;,35))
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuI2JpbmRpbmdcbmJpZ2xpc3QgPSBsaXN0KFxcSm9oblxcLCAxNzgsIGxpc3QoXFxNYXJ5XFwsMzUpKVxuXG5iaWdsaXN0ICNuYW1lIGNhbGxcbmxpc3QoXFxKb2huXFwsIDE3OCwgbGlzdChcXE1hcnlcXCwzNSkpXG5cbiPkuIvmlrnlhanlgIvnm7jlkIzmhI/mgJ1cbmJpZ2xpc3RbWzNdXVtbMl1dXG5saXN0KFxcSm9oblxcLCAxNzgsIGxpc3QoXFxNYXJ5XFwsMzUpKVtbM11dW1syXV1cbmBgYFxuYGBgIn0= -->
+<pre class="r"><code>```r
+#binding
+biglist = list(\John\, 178, list(\Mary\,35))
 
 biglist #name call
-list(&quot;John&quot;, 178, list(&quot;Mary&quot;,35))
+list(\John\, 178, list(\Mary\,35))
 
 #下方兩個相同意思
 biglist[[3]][[2]]
-list(&quot;John&quot;, 178, list(&quot;Mary&quot;,35))[[3]][[2]]</code></pre>
+list(\John\, 178, list(\Mary\,35))[[3]][[2]]</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlzdChcIkpvaG5cIiwgMTc4LCAgbGlzdChcIk1hcnlcIiwzNSkpW1syXV0j5YWI6JCD5Y+WbGlzdChcIk1hcnlcIiwzNSlcblxuYGBgIn0= --&gt;
+
+```r
+list(&quot;John&quot;, 178,  list(&quot;Mary&quot;,35))[[2]]#先萃取list(&quot;Mary&quot;,35)
+</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDE3OFxuIn0= -->
+<pre><code>[1] 178</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlzdChcIkpvaG5cIiwgMTc4LCBsaXN0KFwiTWFyeVwiLDM1KSlbWzNdXSPlhYjokIPlj5ZsaXN0KFwiTWFyeVwiLDM1KVxubGlzdChcIk1hcnlcIiwzNSlbWzJdXSPmiY3okIPlj5YzNVxuYGBgIn0= -->
-<pre class="r"><code>list(&quot;John&quot;, 178, list(&quot;Mary&quot;,35))[[3]]#先萃取list(&quot;Mary&quot;,35)
-list(&quot;Mary&quot;,35)[[2]]#才萃取35</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlzdChcIkpvaG5cIiwgMTc4LCBsaXN0KFwiTWFyeVwiLDM1KSlbWzNdXSAtPiBiaWdsaXN0XG5iaWdsaXN0IDwtIGxpc3QoXCJKb2huXCIsIDE3OCwgbGlzdChcIk1hcnlcIiwzNSkpW1szXV1cbiPnm7jlkIzmhI/mgJ1cbmBgYCJ9 -->
-<pre class="r"><code>list(&quot;John&quot;, 178, list(&quot;Mary&quot;,35))[[3]] -&gt; biglist
-biglist &lt;- list(&quot;John&quot;, 178, list(&quot;Mary&quot;,35))[[3]]
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubGlzdChcXEpvaG5cXCwgMTc4LCBsaXN0KFxcTWFyeVxcLDM1KSlbWzNdXSAtPiBiaWdsaXN0XG5iaWdsaXN0IDwtIGxpc3QoXFxKb2huXFwsIDE3OCwgbGlzdChcXE1hcnlcXCwzNSkpW1szXV1cbiPnm7jlkIzmhI/mgJ1cbmBgYFxuYGBgIn0= -->
+<pre class="r"><code>```r
+list(\John\, 178, list(\Mary\,35))[[3]] -&gt; biglist
+biglist &lt;- list(\John\, 178, list(\Mary\,35))[[3]]
 #相同意思</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYyhcImVsZW1lbnRzXCIsIFwiZWxlbWVudDJcIikgIyB0d28gY2hhcmFjdGVyIHZhbHVlc1xuXG5gYGAifQ== -->
-<pre class="r"><code>c(&quot;elements&quot;, &quot;element2&quot;) # two character values
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuYyhcXGVsZW1lbnRzXFwsIFxcZWxlbWVudDJcXCkgIyB0d28gY2hhcmFjdGVyIHZhbHVlc1xuXG5gYGBcbmBgYCJ9 --&gt;
+
+```r
+```r
+c(\elements\, \element2\) # two character values
 </code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiZWxlbWVudHNcIiBcImVsZW1lbnQyXCJcbiJ9 -->
-<pre><code>[1] &quot;elements&quot; &quot;element2&quot;</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYyhjKFwiYVwiLCBcImJcIiksIGMoXCJjXCIsIFwiZFwiKSlbWzFdXVxuYyhjKFwiYVwiLCBcImJcIiksIGMoXCJjXCIsIFwiZFwiKSlbWzJdXVxuYyhjKFwiYVwiLCBcImJcIiksIGMoXCJjXCIsIFwiZFwiKSlbWzNdXVxuYyhjKFwiYVwiLCBcImJcIiksIGMoXCJjXCIsIFwiZFwiKSlbWzRdXVxuI2xpc3TkuI3mnIPmiZPmlaNcbmxpc3QoYyhcImFcIiwgXCJiXCIpLCBjKFwiY1wiLCBcImRcIikpW1sxXV1cbmxpc3QoYyhcImFcIiwgXCJiXCIpLCBjKFwiY1wiLCBcImRcIikpW1syXV1cbmxpc3QoYyhcImFcIiwgXCJiXCIpLCBjKFwiY1wiLCBcImRcIikpW1szXV0gIyBFcnJvcu+8jOWboOeCuuaykuacieesrOS4ieWAi+WFg+e0oOWAvFxuYGBgIn0= -->
-<pre class="r"><code>c(c(&quot;a&quot;, &quot;b&quot;), c(&quot;c&quot;, &quot;d&quot;))[[1]]
-c(c(&quot;a&quot;, &quot;b&quot;), c(&quot;c&quot;, &quot;d&quot;))[[2]]
-c(c(&quot;a&quot;, &quot;b&quot;), c(&quot;c&quot;, &quot;d&quot;))[[3]]
-c(c(&quot;a&quot;, &quot;b&quot;), c(&quot;c&quot;, &quot;d&quot;))[[4]]
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-output-begin eyJkYXRhIjoiWzFdIFxcZWxlbWVudHNcXCBcXGVsZW1lbnQyXFxcbiJ9 --&gt;
+</code></pre>
+<p>[1]  <br />
+</p>
+<pre><code>
+
+
+&lt;!-- rnb-output-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuYyhjKFxcYVxcLCBcXGJcXCksIGMoXFxjXFwsIFxcZFxcKSlbWzFdXVxuYyhjKFxcYVxcLCBcXGJcXCksIGMoXFxjXFwsIFxcZFxcKSlbWzJdXVxuYyhjKFxcYVxcLCBcXGJcXCksIGMoXFxjXFwsIFxcZFxcKSlbWzNdXVxuYyhjKFxcYVxcLCBcXGJcXCksIGMoXFxjXFwsIFxcZFxcKSlbWzRdXVxuI2xpc3TkuI3mnIPmiZPmlaNcbmxpc3QoYyhcXGFcXCwgXFxiXFwpLCBjKFxcY1xcLCBcXGRcXCkpW1sxXV1cbmxpc3QoYyhcXGFcXCwgXFxiXFwpLCBjKFxcY1xcLCBcXGRcXCkpW1syXV1cbmxpc3QoYyhcXGFcXCwgXFxiXFwpLCBjKFxcY1xcLCBcXGRcXCkpW1szXV0gIyBFcnJvcu+8jOWboOeCuuaykuacieesrOS4ieWAi+WFg+e0oOWAvFxuYGBgXG5gYGAifQ== --&gt;
+
+```r
+```r
+c(c(\a\, \b\), c(\c\, \d\))[[1]]
+c(c(\a\, \b\), c(\c\, \d\))[[2]]
+c(c(\a\, \b\), c(\c\, \d\))[[3]]
+c(c(\a\, \b\), c(\c\, \d\))[[4]]
 #list不會打散
-list(c(&quot;a&quot;, &quot;b&quot;), c(&quot;c&quot;, &quot;d&quot;))[[1]]
-list(c(&quot;a&quot;, &quot;b&quot;), c(&quot;c&quot;, &quot;d&quot;))[[2]]
-list(c(&quot;a&quot;, &quot;b&quot;), c(&quot;c&quot;, &quot;d&quot;))[[3]] # Error，因為沒有第三個元素值</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI+iQrOS4gOaDs+WPluWHujNcbmxpc3QoYyhcImFcIiwgXCJiXCIpLCBjKFwiY1wiLCBcImRcIikpW1syXV1bWzJdXVxuXG5gYGAifQ== -->
-<pre class="r"><code>#萬一想取出3
-list(c(&quot;a&quot;, &quot;b&quot;), c(&quot;c&quot;, &quot;d&quot;))[[2]][[2]]
+list(c(\a\, \b\), c(\c\, \d\))[[1]]
+list(c(\a\, \b\), c(\c\, \d\))[[2]]
+list(c(\a\, \b\), c(\c\, \d\))[[3]] # Error，因為沒有第三個元素值</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuI+iQrOS4gOaDs+WPluWHujNcbmxpc3QoYyhcXGFcXCwgXFxiXFwpLCBjKFxcY1xcLCBcXGRcXCkpW1syXV1bWzJdXVxuXG5gYGBcbmBgYCJ9 --&gt;
+
+```r
+```r
+#萬一想取出3
+list(c(\a\, \b\), c(\c\, \d\))[[2]][[2]]
 </code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiZFwiXG4ifQ== -->
-<pre><code>[1] &quot;d&quot;</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-output-begin eyJkYXRhIjoiWzFdIFxcZFxcXG4ifQ== --&gt;
+</code></pre>
+<p>[1] ```</p>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYyhjKFwiYVwiLCBcImJcIiksYyhcImNcIiwgXCJkXCIpKVtbMl1dW1syXV0jZXJyb3LvvIzlm6Dngrpj5pyD5omT5pWjXG5gYGAifQ== -->
-<pre class="r"><code>c(c(&quot;a&quot;, &quot;b&quot;),c(&quot;c&quot;, &quot;d&quot;))[[2]][[2]]#error，因為c會打散</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYyg1NCwgMzIsIDI4LCAyMCkgIyBhZ2VcbmMoXCJtYWxlXCIsIFwiZmVtYWxlXCIsIFwiZmVtYWxlXCIsIFwibWFsZVwiKSAjIGdlbmRlclxuYyhcIm5vcnRoXCIsIFwic291dGhcIiwgXCJlYXN0XCIsIFwiZWFzdFwiKSAjIHJlc2lkZW5jZVxuYygxMDAsIDI1LCBOQSwgNzcpICMgaW5jb21lXG5gYGAifQ== -->
-<pre class="r"><code>c(54, 32, 28, 20) # age
-c(&quot;male&quot;, &quot;female&quot;, &quot;female&quot;, &quot;male&quot;) # gender
-c(&quot;north&quot;, &quot;south&quot;, &quot;east&quot;, &quot;east&quot;) # residence
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuYyhjKFxcYVxcLCBcXGJcXCksYyhcXGNcXCwgXFxkXFwpKVtbMl1dW1syXV0jZXJyb3LvvIzlm6Dngrpj5pyD5omT5pWjXG5gYGBcbmBgYCJ9 -->
+<pre class="r"><code>```r
+c(c(\a\, \b\),c(\c\, \d\))[[2]][[2]]#error，因為c會打散</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuYyg1NCwgMzIsIDI4LCAyMCkgIyBhZ2VcbmMoXFxtYWxlXFwsIFxcZmVtYWxlXFwsIFxcZmVtYWxlXFwsIFxcbWFsZVxcKSAjIGdlbmRlclxuYyhcXG5vcnRoXFwsIFxcc291dGhcXCwgXFxlYXN0XFwsIFxcZWFzdFxcKSAjIHJlc2lkZW5jZVxuYygxMDAsIDI1LCBOQSwgNzcpICMgaW5jb21lXG5gYGBcbmBgYCJ9 --&gt;
+
+```r
+```r
+c(54, 32, 28, 20) # age
+c(\male\, \female\, \female\, \male\) # gender
+c(\north\, \south\, \east\, \east\) # residence
 c(100, 25, NA, 77) # income</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYWdlID0gYyg1NCwgMjQsIDM4LCAyMClcbmluY29tZSA9IGMoMTAwLCAyNSwgTkEsIDc3KSAjIE5BIC0gbm90IGF2YWlsYWJsZVxuYGBgIn0= --&gt;
+
+```r
+age = c(54, 24, 38, 20)
+income = c(100, 25, NA, 77) # NA - not available</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlzdChcbiAgbGlzdCg1NCwgXCJtYWxlXCIsIFwibm9ydGhcIiwgMTAwKSwgIyAoMSlcbiAgbGlzdCgzMiwgXCJmZW1hbGVcIiwgXCJzb3V0aFwiLCAyNSksICMgKDIpXG4gIGxpc3QoMjgsIFwiZmVtYWxlXCIsIFwiZWFzdFwiLCBOQSksICMgKDMpXG4gIGxpc3QoMjAsIFwibWFsZVwiLCBcImVhc3RcIiwgNzcpICMgKDQpXG4pXG5cbmMoXG4gIGxpc3QoNTQsIFwibWFsZVwiLCBcIm5vcnRoXCIsIDEwMCksICMgKDEpXG4gIGxpc3QoMzIsIFwiZmVtYWxlXCIsIFwic291dGhcIiwgMjUpLCAjICgyKVxuICBsaXN0KDI4LCBcImZlbWFsZVwiLCBcImVhc3RcIiwgTkEpLCAjICgzKVxuICBsaXN0KDIwLCBcIm1hbGVcIiwgXCJlYXN0XCIsIDc3KSAjICg0KVxuKSPkuI3lj6/ku6XnlKhj5Zug54K6Y+acg+aJk+aVo+WGjemHjeaWsOe3qOaOku+8jOmAmeaoo+acg+mBuuWkseS5i+WJjeeahOizh+aWmee1kOani1xuYGBgIn0= -->
-<pre class="r"><code>list(
-  list(54, &quot;male&quot;, &quot;north&quot;, 100), # (1)
-  list(32, &quot;female&quot;, &quot;south&quot;, 25), # (2)
-  list(28, &quot;female&quot;, &quot;east&quot;, NA), # (3)
-  list(20, &quot;male&quot;, &quot;east&quot;, 77) # (4)
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubGlzdChcbiAgbGlzdCg1NCwgXFxtYWxlXFwsIFxcbm9ydGhcXCwgMTAwKSwgIyAoMSlcbiAgbGlzdCgzMiwgXFxmZW1hbGVcXCwgXFxzb3V0aFxcLCAyNSksICMgKDIpXG4gIGxpc3QoMjgsIFxcZmVtYWxlXFwsIFxcZWFzdFxcLCBOQSksICMgKDMpXG4gIGxpc3QoMjAsIFxcbWFsZVxcLCBcXGVhc3RcXCwgNzcpICMgKDQpXG4pXG5cbmMoXG4gIGxpc3QoNTQsIFxcbWFsZVxcLCBcXG5vcnRoXFwsIDEwMCksICMgKDEpXG4gIGxpc3QoMzIsIFxcZmVtYWxlXFwsIFxcc291dGhcXCwgMjUpLCAjICgyKVxuICBsaXN0KDI4LCBcXGZlbWFsZVxcLCBcXGVhc3RcXCwgTkEpLCAjICgzKVxuICBsaXN0KDIwLCBcXG1hbGVcXCwgXFxlYXN0XFwsIDc3KSAjICg0KVxuKSPkuI3lj6/ku6XnlKhj5Zug54K6Y+acg+aJk+aVo+WGjemHjeaWsOe3qOaOku+8jOmAmeaoo+acg+mBuuWkseS5i+WJjeeahOizh+aWmee1kOani1xuYGBgXG5gYGAifQ== -->
+<pre class="r"><code>```r
+list(
+  list(54, \male\, \north\, 100), # (1)
+  list(32, \female\, \south\, 25), # (2)
+  list(28, \female\, \east\, NA), # (3)
+  list(20, \male\, \east\, 77) # (4)
 )
 
 c(
-  list(54, &quot;male&quot;, &quot;north&quot;, 100), # (1)
-  list(32, &quot;female&quot;, &quot;south&quot;, 25), # (2)
-  list(28, &quot;female&quot;, &quot;east&quot;, NA), # (3)
-  list(20, &quot;male&quot;, &quot;east&quot;, 77) # (4)
+  list(54, \male\, \north\, 100), # (1)
+  list(32, \female\, \south\, 25), # (2)
+  list(28, \female\, \east\, NA), # (3)
+  list(20, \male\, \east\, 77) # (4)
 )#不可以用c因為c會打散再重新編排，這樣會遺失之前的資料結構</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIzIuMTLlkb3lkI3lhYPntKDlgLxcbiMgYXRvbWljIHZlY3RvclxuYyhcIkpvaG5cIj0xNzcsIFwiTWFyeVwiPTE2MCwgXCJCaWxsXCI9MTcwKVxuXG4jIGxpc3Rcbmxpc3QoXCJKb2huXCI9MTc3LCBcIk1hcnlcIj0xNjAsIFwiQmlsbFwiPTE3MClcbmxpc3QoMTc3LiBcIkFCXCIpXG5saXN0KFwiaGVpZ2h0XCI9MTc3LCBcImJsb29kdHlwZVwiPVwiQUJcIilcbmBgYCJ9 -->
-<pre class="r"><code>#2.12命名元素值
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuIzIuMTLlkb3lkI3lhYPntKDlgLxcbiMgYXRvbWljIHZlY3RvclxuYyhcXEpvaG5cXD0xNzcsIFxcTWFyeVxcPTE2MCwgXFxCaWxsXFw9MTcwKVxuXG4jIGxpc3Rcbmxpc3QoXFxKb2huXFw9MTc3LCBcXE1hcnlcXD0xNjAsIFxcQmlsbFxcPTE3MClcbmxpc3QoMTc3LiBcXEFCXFwpXG5saXN0KFxcaGVpZ2h0XFw9MTc3LCBcXGJsb29kdHlwZVxcPVxcQUJcXClcbmBgYFxuYGBgIn0= --&gt;
+
+```r
+```r
+#2.12命名元素值
 # atomic vector
-c(&quot;John&quot;=177, &quot;Mary&quot;=160, &quot;Bill&quot;=170)
+c(\John\=177, \Mary\=160, \Bill\=170)
 
 # list
-list(&quot;John&quot;=177, &quot;Mary&quot;=160, &quot;Bill&quot;=170)
-list(177. &quot;AB&quot;)
-list(&quot;height&quot;=177, &quot;bloodtype&quot;=&quot;AB&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlzdChoZWlnaHQ9MTc3LCBcImJsb29kdHlwZVwiPVwiQUJcIilcblxuYGBgIn0= -->
-<pre class="r"><code>list(height=177, &quot;bloodtype&quot;=&quot;AB&quot;)
-</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiJGhlaWdodFxuWzFdIDE3N1xuXG4kYmxvb2R0eXBlXG5bMV0gXCJBQlwiXG4ifQ== -->
-<pre><code>$height
-[1] 177
+list(\John\=177, \Mary\=160, \Bill\=170)
+list(177. \AB\)
+list(\height\=177, \bloodtype\=\AB\)</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
 
-$bloodtype
-[1] &quot;AB&quot;</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlzdChcIkpvaG5cIj0xNzcsIFwiTWFyeVwiPTE2MCwgXCJCaWxsXCI9MTcwKVtbMl1dXG5saXN0KFwiSm9oblwiPTE3NywgXCJNYXJ5XCI9MTYwLCBcIkJpbGxcIj0xNzApW1tcIk1hcnlcIl1dXG5saXN0KFwiSm9oblwiPTE3NywgXCJNYXJ5XCI9MTYwLCBcIkJpbGxcIj0xNzApW1tNYXJ5XV0jZXJyb3JcbmBgYCJ9 -->
-<pre class="r"><code>list(&quot;John&quot;=177, &quot;Mary&quot;=160, &quot;Bill&quot;=170)[[2]]
-list(&quot;John&quot;=177, &quot;Mary&quot;=160, &quot;Bill&quot;=170)[[&quot;Mary&quot;]]
-list(&quot;John&quot;=177, &quot;Mary&quot;=160, &quot;Bill&quot;=170)[[Mary]]#error</code></pre>
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubGlzdChoZWlnaHQ9MTc3LCBcXGJsb29kdHlwZVxcPVxcQUJcXClcblxuYGBgXG5gYGAifQ== --&gt;
+
+```r
+```r
+list(height=177, \bloodtype\=\AB\)
+</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-output-begin eyJkYXRhIjoiJGhlaWdodFxuWzFdIDE3N1xuXG4kYmxvb2R0eXBlXG5bMV0gXFxBQlxcXG4ifQ== --&gt;
+</code></pre>
+<p>$height [1] 177</p>
+<p>$bloodtype [1] <br />
+</p>
+<pre><code>
+
+
+&lt;!-- rnb-output-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubGlzdChcXEpvaG5cXD0xNzcsIFxcTWFyeVxcPTE2MCwgXFxCaWxsXFw9MTcwKVtbMl1dXG5saXN0KFxcSm9oblxcPTE3NywgXFxNYXJ5XFw9MTYwLCBcXEJpbGxcXD0xNzApW1tcXE1hcnlcXF1dXG5saXN0KFxcSm9oblxcPTE3NywgXFxNYXJ5XFw9MTYwLCBcXEJpbGxcXD0xNzApW1tNYXJ5XV0jZXJyb3JcbmBgYFxuYGBgIn0= --&gt;
+
+```r
+```r
+list(\John\=177, \Mary\=160, \Bill\=170)[[2]]
+list(\John\=177, \Mary\=160, \Bill\=170)[[\Mary\]]
+list(\John\=177, \Mary\=160, \Bill\=170)[[Mary]]#error</code></pre>
+<p>```</p>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
