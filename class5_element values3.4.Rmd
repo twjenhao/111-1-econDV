@@ -1,7 +1,10 @@
 ---
 title: "R Notebook"
 output: html_notebook
+editor_options: 
+  chunk_output_type: console
 ---
+
 ```{r}
 example1 <- c("John", "Mary", "Bill")
 ```
@@ -15,17 +18,21 @@ example1[[4]] <- "Ken"
 ```{r}
 example1[[4]]
 ```
+
 ```{r}
 example1[["person5"]] <- "Jane"
 ```
+
 ```{r}
 example1[[6]]
 example1[[6]] <- c("person6"="Kenny")
 #可發現右手邊取element name，沒有效果，可以比較person5
 ```
+
 ```{r}
 example1
 ```
+
 ```{r}
 example1[c(7, 8)]
 example1[c(1, 2)]
@@ -35,6 +42,7 @@ example1[c(7, 8)] <- c("Ellison", "David")
 ```{r}
 example1
 ```
+
 ```{r}
 example1[c("person9", "person10")] <- c("Andy", "Candy")
 ```
@@ -66,5 +74,124 @@ JohnsFamily <-
     )
   )
 ```
+
+```{r}
+JohnsFamilyCopy2 <- JohnsFamily
+```
+
+```{r}
+JohnsFamilyCopy2$children |> length()
+# "|>"串接符號，等同於 length(JohnsFamilyCopy2$children)
+JohnsFamilyCopy2$children[[1]]
+JohnsFamilyCopy2$children[[2]]
+JohnsFamilyCopy2$children[[3]] <-list(name = "Lisa", age = "0")
+JohnsFamilyCopy2$children[[3]]
+```
+
+```{r}
+JohnsFamilyCopy2[[3]][[2]] <- 1
+JohnsFamilyCopy2[[3]][[2]]
+```
+
+```{r}
+JohnsFamilyCopy2$children[[2]][c("name", "age")]
+```
+
+```{r}
+JohnsFamilyCopy2$children[c(1, 2)] |> dput()
+list(
+  list(name = "Bill", age = 5), 
+  list(name = "Jane", age = 3)
+  )
+#list裡面又再包兩個list
+```
+
+```{r}
+JohnsFamilyCopy2$children[c(4, 5)] <-
+  list(
+    list(name = "Lisa4", age = 0),
+    list(name = "Lisa5", age = 0)
+  )
+JohnsFamilyCopy2$children[c(4, 5)]
+```
+
+```{r}
+JohnsFamilyCopy2$children[[2]]$children <- 
+list(
+  list(
+  name = "Jane1", age = 1)
+  )
+
+JohnsFamilyCopy2$children[[2]]$children
+```
+
+
+```{r}
+height <- list()
+height[[1]] <- list("001" =177)
+height[[1]] |> dput()
+```
+```{r}
+heightCopy <- height
+heightCopy
+```
+
+```{r}
+height <- numeric(0)
+height[[1]] #no element name
+height[[1]] <-177
+height[[1]]
+height[["001"]] <- 177
+height
+length(height[[2]]) 
+```
+
+```{r}
+height <- numeric(0)
+height[["001"]] <- 173
+height[c("001","002")] <- c(177, 173)
+height
+```
+```{r}
+list(
+  name="programing for data science",
+  credit=2
+)
+```
+
+```{r}
+#先宣告
+classSchedule <- list()
+classSchedule$y108$semester1[[1]] <- list(
+  name="programing for data science",
+  credit=2
+)
+classSchedule$y109$semester2[[1]] <- list(
+  name = "math", credit = "3"
+)
+classSchedule
+#先思考怎麼取資料，再思考如何如何架構資料
+#會比下面方式更容易
+```
+
+```{r}
+list(
+  y1o8 = list(
+    semester = list(
+      list(name = "programing for data science",
+           credit =2)
+    )
+  )
+)
+```
+
+
+
+
+
+
+
+
+
 
 

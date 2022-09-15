@@ -1793,6 +1793,8 @@ pre code {
 <pre><code>[1] &quot;Ken&quot;</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZXhhbXBsZTFbW3BlcnNvbjVdXSA8LSBcIkphbmVcIlxuXG5gYGAifQ== -->
 <pre class="r"><code>example1[[person5]] &lt;- &quot;Jane&quot;
@@ -1802,42 +1804,44 @@ pre code {
 <pre><code>Error in example1[[person5]] &lt;- &quot;Jane&quot; : object &#39;person5&#39; not found</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZXhhbXBsZTFbWzZdXVxuXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZXhhbXBsZTFbWzZdXVxuZXhhbXBsZTFbWzZdXSA8LSBjKFwicGVyc29uNlwiPVwiS2VubnlcIilcbiPlj6/nmbznj77lj7PmiYvpgorlj5ZlbGVtZW50IG5hbWXvvIzmspLmnInmlYjmnpzvvIzlj6/ku6Xmr5TovINwZXJzb241XG5gYGAifQ== -->
 <pre class="r"><code>example1[[6]]
-</code></pre>
+example1[[6]] &lt;- c(&quot;person6&quot;=&quot;Kenny&quot;)
+#可發現右手邊取element name，沒有效果，可以比較person5</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiS2VubnlcIlxuIn0= -->
-<pre><code>[1] &quot;Kenny&quot;</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZXhhbXBsZTFcblxuYGBgIn0= -->
-<pre class="r"><code>example1
-</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBwZXJzb241ICAgICAgICAgXG4gXCJKb2huXCIgIFwiTWFyeVwiICBcIkJpbGxcIiAgIFwiS2VuXCIgIFwiSmFuZVwiIFwiS2VubnlcIiBcbiJ9 -->
-<pre><code>                                person5         
- &quot;John&quot;  &quot;Mary&quot;  &quot;Bill&quot;   &quot;Ken&quot;  &quot;Jane&quot; &quot;Kenny&quot; </code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-chunk-begin -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZXhhbXBsZTFcblxuYGBgIn0= -->
-<pre class="r"><code>example1
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZXhhbXBsZTFcbmBgYCJ9 -->
+<pre class="r"><code>example1</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcGVyc29uNSAgICAgICAgICAgXG4gICBcIkpvaG5cIiAgICBcIk1hcnlcIiAgICBcIkJpbGxcIiAgICAgXCJLZW5cIiAgICBcIkphbmVcIiAgIFwiS2VubnlcIiBcbiAgICAgICAgICAgICAgICAgICAgXG5cIkVsbGlzb25cIiAgIFwiRGF2aWRcIiBcbiJ9 -->
-<pre><code>                                          person5           
-   &quot;John&quot;    &quot;Mary&quot;    &quot;Bill&quot;     &quot;Ken&quot;    &quot;Jane&quot;   &quot;Kenny&quot; 
-                    
-&quot;Ellison&quot;   &quot;David&quot; </code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZXhhbXBsZTFbYyg3LCA4KV1cbmV4YW1wbGUxW2MoMSwgMildXG5leGFtcGxlMVtjKDcsIDgpXSA8LSBjKFwiRWxsaXNvblwiLCBcIkRhdmlkXCIpXG5gYGAifQ== -->
+<pre class="r"><code>example1[c(7, 8)]
+example1[c(1, 2)]
+example1[c(7, 8)] &lt;- c(&quot;Ellison&quot;, &quot;David&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZXhhbXBsZTFcbmBgYCJ9 -->
+<pre class="r"><code>example1</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZXhhbXBsZTFbYyhcInBlcnNvbjlcIiwgXCJwZXJzb24xMFwiKV0gPC0gYyhcIkFuZHlcIiwgXCJDYW5keVwiKVxuYGBgIn0= -->
+<pre class="r"><code>example1[c(&quot;person9&quot;, &quot;person10&quot;)] &lt;- c(&quot;Andy&quot;, &quot;Candy&quot;)</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
@@ -1849,6 +1853,10 @@ pre code {
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZXhhbXBsZTFbYygxLCAxMSldIDwtIGMoXCJKb2hubnlcIiwgXCJHcmlsbFwiKVxuI+aWsOWinuWKoOS4iuWPluS7o1xuYGBgIn0= -->
+<pre class="r"><code>example1[c(1, 11)] &lt;- c(&quot;Johnny&quot;, &quot;Grill&quot;)
+#新增加上取代</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
@@ -1874,8 +1882,91 @@ pre code {
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuSm9obnNGYW1pbHlDb3B5MiA8LSBKb2huc0ZhbWlseVxuYGBgIn0= -->
+<pre class="r"><code>JohnsFamilyCopy2 &lt;- JohnsFamily</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuSm9obnNGYW1pbHlDb3B5MiRjaGlsZHJlbiB8PiBsZW5ndGgoKVxuIyBcInw+XCLkuLLmjqXnrKbomZ/vvIznrYnlkIzmlrwgbGVuZ3RoKEpvaG5zRmFtaWx5Q29weTIkY2hpbGRyZW4pXG5Kb2huc0ZhbWlseUNvcHkyJGNoaWxkcmVuW1sxXV1cbkpvaG5zRmFtaWx5Q29weTIkY2hpbGRyZW5bWzJdXVxuSm9obnNGYW1pbHlDb3B5MiRjaGlsZHJlbltbM11dIDwtbGlzdChuYW1lID0gXCJMaXNhXCIsIGFnZSA9IFwiMFwiKVxuSm9obnNGYW1pbHlDb3B5MiRjaGlsZHJlbltbM11dXG5gYGAifQ== -->
+<pre class="r"><code>JohnsFamilyCopy2$children |&gt; length()
+# &quot;|&gt;&quot;串接符號，等同於 length(JohnsFamilyCopy2$children)
+JohnsFamilyCopy2$children[[1]]
+JohnsFamilyCopy2$children[[2]]
+JohnsFamilyCopy2$children[[3]] &lt;-list(name = &quot;Lisa&quot;, age = &quot;0&quot;)
+JohnsFamilyCopy2$children[[3]]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuSm9obnNGYW1pbHlDb3B5MltbM11dW1syXV0gPC0gMVxuSm9obnNGYW1pbHlDb3B5MltbM11dW1syXV1cbmBgYCJ9 -->
+<pre class="r"><code>JohnsFamilyCopy2[[3]][[2]] &lt;- 1
+JohnsFamilyCopy2[[3]][[2]]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuSm9obnNGYW1pbHlDb3B5MiRjaGlsZHJlbltbMl1dW2MoXCJuYW1lXCIsIFwiYWdlXCIpXVxuYGBgIn0= -->
+<pre class="r"><code>JohnsFamilyCopy2$children[[2]][c(&quot;name&quot;, &quot;age&quot;)]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuSm9obnNGYW1pbHlDb3B5MiRjaGlsZHJlbltjKDEsIDIpXSB8PiBkcHV0KClcbmxpc3QoXG4gIGxpc3QobmFtZSA9IFwiQmlsbFwiLCBhZ2UgPSA1KSwgXG4gIGxpc3QobmFtZSA9IFwiSmFuZVwiLCBhZ2UgPSAzKVxuICApXG4jbGlzdOijoemdouWPiOWGjeWMheWFqeWAi2xpc3RcbmBgYCJ9 -->
+<pre class="r"><code>JohnsFamilyCopy2$children[c(1, 2)] |&gt; dput()
+list(
+  list(name = &quot;Bill&quot;, age = 5), 
+  list(name = &quot;Jane&quot;, age = 3)
+  )
+#list裡面又再包兩個list</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuSm9obnNGYW1pbHlDb3B5MiRjaGlsZHJlbltjKDQsIDUpXVxuXG5gYGAifQ== -->
+<pre class="r"><code>JohnsFamilyCopy2$children[c(4, 5)]
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiW1sxXV1cbltbMV1dJG5hbWVcblsxXSBcIkxpc2E0XCJcblxuW1sxXV0kYWdlXG5bMV0gMFxuXG5cbltbMl1dXG5bWzJdXSRuYW1lXG5bMV0gXCJMaXNhNVwiXG5cbltbMl1dJGFnZVxuWzFdIDBcbiJ9 -->
+<pre><code>[[1]]
+[[1]]$name
+[1] &quot;Lisa4&quot;
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQpgYGB7cn0KZXhhbXBsZTEgPC0gYygiSm9obiIsICJNYXJ5IiwgIkJpbGwiKQpgYGAKCmBgYHtyfQpleGFtcGxlMVtbMl1dCmV4YW1wbGUxW1s0XV0KZXhhbXBsZTFbWzRdXSA8LSAiS2VuIgpgYGAKCmBgYHtyfQpleGFtcGxlMVtbNF1dCmBgYApgYGB7cn0KZXhhbXBsZTFbWyJwZXJzb241Il1dIDwtICJKYW5lIgpgYGAKYGBge3J9CmV4YW1wbGUxW1s2XV0KZXhhbXBsZTFbWzZdXSA8LSBjKCJwZXJzb242Ij0iS2VubnkiKQoj5Y+v55m854++5Y+z5omL6YKK5Y+WZWxlbWVudCBuYW1l77yM5rKS5pyJ5pWI5p6c77yM5Y+v5Lul5q+U6LyDcGVyc29uNQpgYGAKYGBge3J9CmV4YW1wbGUxCmBgYApgYGB7cn0KZXhhbXBsZTFbYyg3LCA4KV0KZXhhbXBsZTFbYygxLCAyKV0KZXhhbXBsZTFbYyg3LCA4KV0gPC0gYygiRWxsaXNvbiIsICJEYXZpZCIpCmBgYAoKYGBge3J9CmV4YW1wbGUxCmBgYApgYGB7cn0KZXhhbXBsZTFbYygicGVyc29uOSIsICJwZXJzb24xMCIpXSA8LSBjKCJBbmR5IiwgIkNhbmR5IikKYGBgCgpgYGB7cn0KZXhhbXBsZTEgI+aciWVsZW1lbnQgbmFtZe+8jOWPquimgeWPlueahOadseilv+S4jeWtmOWcqO+8jOWJh+Wwseacg+aWsOWingpgYGAKCmBgYHtyfQpleGFtcGxlMVtjKDEsIDExKV0gPC0gYygiSm9obm55IiwgIkdyaWxsIikKI+aWsOWinuWKoOS4iuWPluS7owpgYGAKCmBgYHtyfQpKb2huc0ZhbWlseSA8LQogIGxpc3QoCiAgICBuYW1lID0gIkpvaG4iLCAKICAgIGFnZSA9IDM1LAogICAgc3BvdXNlID0gbGlzdCgKICAgICAgbmFtZSA9ICJNYXJ5IiwgCiAgICAgIGFnZSA9IDMyKSwKICAgIGNoaWxkcmVuID0gbGlzdCgKICAgICAgbGlzdCgKICAgICAgICBuYW1lID0gIkJpbGwiLCAKICAgICAgICBhZ2UgPSA1KSwKICAgICAgbGlzdCgKICAgICAgICBuYW1lID0gIkphbmUiLCAKICAgICAgICBhZ2UgPSAzKQogICAgKQogICkKYGBgCgoK</div>
+[[1]]$age
+[1] 0
+
+
+[[2]]
+[[2]]$name
+[1] &quot;Lisa5&quot;
+
+[[2]]$age
+[1] 0</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuSm9obnNGYW1pbHlDb3B5MiRjaGlsZHJlbltbMl1dXG5cbmBgYCJ9 -->
+<pre class="r"><code>JohnsFamilyCopy2$children[[2]]
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiJG5hbWVcblsxXSBcIkphbmVcIlxuXG4kYWdlXG5bMV0gM1xuIn0= -->
+<pre><code>$name
+[1] &quot;Jane&quot;
+
+$age
+[1] 3</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKYGBge3J9CmV4YW1wbGUxIDwtIGMoIkpvaG4iLCAiTWFyeSIsICJCaWxsIikKYGBgCgpgYGB7cn0KZXhhbXBsZTFbWzJdXQpleGFtcGxlMVtbNF1dCmV4YW1wbGUxW1s0XV0gPC0gIktlbiIKYGBgCgpgYGB7cn0KZXhhbXBsZTFbWzRdXQpgYGAKCmBgYHtyfQpleGFtcGxlMVtbInBlcnNvbjUiXV0gPC0gIkphbmUiCmBgYAoKYGBge3J9CmV4YW1wbGUxW1s2XV0KZXhhbXBsZTFbWzZdXSA8LSBjKCJwZXJzb242Ij0iS2VubnkiKQoj5Y+v55m854++5Y+z5omL6YKK5Y+WZWxlbWVudCBuYW1l77yM5rKS5pyJ5pWI5p6c77yM5Y+v5Lul5q+U6LyDcGVyc29uNQpgYGAKCmBgYHtyfQpleGFtcGxlMQpgYGAKCmBgYHtyfQpleGFtcGxlMVtjKDcsIDgpXQpleGFtcGxlMVtjKDEsIDIpXQpleGFtcGxlMVtjKDcsIDgpXSA8LSBjKCJFbGxpc29uIiwgIkRhdmlkIikKYGBgCgpgYGB7cn0KZXhhbXBsZTEKYGBgCgpgYGB7cn0KZXhhbXBsZTFbYygicGVyc29uOSIsICJwZXJzb24xMCIpXSA8LSBjKCJBbmR5IiwgIkNhbmR5IikKYGBgCgpgYGB7cn0KZXhhbXBsZTEgI+aciWVsZW1lbnQgbmFtZe+8jOWPquimgeWPlueahOadseilv+S4jeWtmOWcqO+8jOWJh+Wwseacg+aWsOWingpgYGAKCmBgYHtyfQpleGFtcGxlMVtjKDEsIDExKV0gPC0gYygiSm9obm55IiwgIkdyaWxsIikKI+aWsOWinuWKoOS4iuWPluS7owpgYGAKCmBgYHtyfQpKb2huc0ZhbWlseSA8LQogIGxpc3QoCiAgICBuYW1lID0gIkpvaG4iLCAKICAgIGFnZSA9IDM1LAogICAgc3BvdXNlID0gbGlzdCgKICAgICAgbmFtZSA9ICJNYXJ5IiwgCiAgICAgIGFnZSA9IDMyKSwKICAgIGNoaWxkcmVuID0gbGlzdCgKICAgICAgbGlzdCgKICAgICAgICBuYW1lID0gIkJpbGwiLCAKICAgICAgICBhZ2UgPSA1KSwKICAgICAgbGlzdCgKICAgICAgICBuYW1lID0gIkphbmUiLCAKICAgICAgICBhZ2UgPSAzKQogICAgKQogICkKYGBgCgpgYGB7cn0KSm9obnNGYW1pbHlDb3B5MiA8LSBKb2huc0ZhbWlseQpgYGAKCmBgYHtyfQpKb2huc0ZhbWlseUNvcHkyJGNoaWxkcmVuIHw+IGxlbmd0aCgpCiMgInw+IuS4suaOpeespuiZn++8jOetieWQjOaWvCBsZW5ndGgoSm9obnNGYW1pbHlDb3B5MiRjaGlsZHJlbikKSm9obnNGYW1pbHlDb3B5MiRjaGlsZHJlbltbMV1dCkpvaG5zRmFtaWx5Q29weTIkY2hpbGRyZW5bWzJdXQpKb2huc0ZhbWlseUNvcHkyJGNoaWxkcmVuW1szXV0gPC1saXN0KG5hbWUgPSAiTGlzYSIsIGFnZSA9ICIwIikKSm9obnNGYW1pbHlDb3B5MiRjaGlsZHJlbltbM11dCmBgYAoKYGBge3J9CkpvaG5zRmFtaWx5Q29weTJbWzNdXVtbMl1dIDwtIDEKSm9obnNGYW1pbHlDb3B5MltbM11dW1syXV0KYGBgCgpgYGB7cn0KSm9obnNGYW1pbHlDb3B5MiRjaGlsZHJlbltbMl1dW2MoIm5hbWUiLCAiYWdlIildCmBgYAoKYGBge3J9CkpvaG5zRmFtaWx5Q29weTIkY2hpbGRyZW5bYygxLCAyKV0gfD4gZHB1dCgpCmxpc3QoCiAgbGlzdChuYW1lID0gIkJpbGwiLCBhZ2UgPSA1KSwgCiAgbGlzdChuYW1lID0gIkphbmUiLCBhZ2UgPSAzKQogICkKI2xpc3Too6HpnaLlj4jlho3ljIXlhanlgItsaXN0CmBgYAoKYGBge3J9CkpvaG5zRmFtaWx5Q29weTIkY2hpbGRyZW5bYyg0LCA1KV0gPC0KICBsaXN0KAogICAgbGlzdChuYW1lID0gIkxpc2E0IiwgYWdlID0gMCksCiAgICBsaXN0KG5hbWUgPSAiTGlzYTUiLCBhZ2UgPSAwKQogICkKSm9obnNGYW1pbHlDb3B5MiRjaGlsZHJlbltjKDQsIDUpXQpgYGAKCmBgYHtyfQpKb2huc0ZhbWlseUNvcHkyJGNoaWxkcmVuW1syXV0kY2hpbGRyZW5bbGlzdCgKICBuYW1lID0gIkphbmUxIiwgYWdlID0gMQopXQpgYGAK</div>
 
 
 
