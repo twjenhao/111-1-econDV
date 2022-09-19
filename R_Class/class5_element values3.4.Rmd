@@ -169,6 +169,7 @@ classSchedule$y108$semester1[[1]] <- list(
 classSchedule$y109$semester2[[1]] <- list(
   name = "math", credit = "3"
 )
+classSchedule$y109$semester2[[2]] <- list(name = "art" , credit = "3")
 classSchedule
 #先思考怎麼取資料，再思考如何如何架構資料
 #會比下面方式更容易
