@@ -150,11 +150,21 @@ survey_fbf$gender[[2]]
 # df[raw,column] data.frame特殊用法
 df[2 , 4]
 df[2 , c("age", "gender", "residence", "income")]
-df[2, ]
+df[2,]
+df[ ,2]
 ```
 
 ```{r}
+survey_fbf2 <-
+  list(
+    age=list(54, 32, 28, 20), # age
+    gender=list("male", "female", "female", "male"), # gender
+    residence=list("north", "south", "east", "east"), # residence
+    income=list(100, 25, NA, 77) # income
+  )
 
+df_survey_fbf2 <- 
+  list2DF(survey_fbf2)
 ```
 
 
