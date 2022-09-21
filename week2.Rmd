@@ -4,3 +4,13 @@ output: html_document
 date: "2022-09-21"
 ---
 
+ˆ
+```{r}
+geom_point(
+  aes(
+    fill,
+    stroke
+  ) #美學元素都要用aes包住,
+  alpha #放在aes以外去做設定，而每一個點都會套用alpha的設定
+)
+```
