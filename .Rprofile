@@ -13,8 +13,10 @@ theme_set(
     theme_classic()
 )
 # some handy tool to use later through out the class
-gg <- list(
+ggenv=new.env() #創造一個新的環境
+ggenv$gg <- list(
   dash = econDV2::ggdash,
   geom = econDV2::ggbrowse,
   aes = econDV2::ggaes
 )
+attach(ggenv)#放到一個程式碼裡面叫gg
