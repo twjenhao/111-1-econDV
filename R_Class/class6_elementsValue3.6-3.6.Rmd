@@ -124,7 +124,22 @@ example5
 
 
 
+```{r}
+install.packages("httr")
+```
 
+```{r}
+httr::GET("https://data.taipei/api/v1/dataset/91290609-2b8b-4130-8ce9-e6085529bc46?scope=resourceAquire&limit=1000") -> mrtStationAds
+mrtStationAds
+mrtStationAds$content
+#需要透過content還原，如下：
+mrtStationAds1 <- 
+  httr::content(mrtStationAds)
+mrtStationAds1
+```
+```{r}
+saveRDS(MRTDATA, file = "MRTDATA.RDS")
+```
 
 
 
