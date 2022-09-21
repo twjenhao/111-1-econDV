@@ -3,5 +3,12 @@ title: "Week2"
 output: html_document
 date: "2022-09-21"
 ---
-test
+```{r}
+install.packages(
+  c("showtext","extrafont", "remotes")
+)
+```
+```{r}
+remotes::install_github("tpemartin/econDV2", force=T)
+```
 
