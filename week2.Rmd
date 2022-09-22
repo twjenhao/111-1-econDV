@@ -2,15 +2,61 @@
 title: "week2"
 output: html_document
 date: "2022-09-21"
+editor_options: 
+  chunk_output_type: console
 ---
 
 ˆ
 ```{r}
 geom_point(
   aes(
-    fill,
-    stroke
+    fill = country,
+    stroke = country
   ) #美學元素都要用aes包住,
   alpha #放在aes以外去做設定，而每一個點都會套用alpha的設定
 )
+
+#aes：裡面的資料分成填色跟邊框顏色，要去定義fill跟stroke分別代表什麼意思
 ```
+
+
+
+
+```{r}
+geom_point()+
+  geom_point()
+
+```
+```{r}
+data.frame(
+  country=c("j","j","j","usa","usa"),
+  threevalues=c(100,50,23,20,20)
+            )
+```
+
+
+
+```{r}
+#oecd國家一組深色藍點圖，畫一組
+#非oecd國家畫一組
+#章節2.1的第一張圖的概念可能是這樣操作
+geom_point(alpha= 1, )+
+  geom_point(alpha=0.5 , )
+```
+
+```{r}
+data.frame(
+  country = c(1, 2, 3, 4),
+  isOECD = c(1, 0, 0, 1)
+) ->dfO
+geom_point(aes(alpha=isOECD),data=dfO)
+```
+
+
+
+
+
+
+
+
+
