@@ -1,3 +1,5 @@
+
+
 library(ggplot2)
 library(showtext)
 library(econDV2)
@@ -20,3 +22,22 @@ ggenv$gg <- list(
   aes = econDV2::ggaes
 )
 attach(ggenv)#放到一個程式碼裡面叫gg
+
+
+Plot <- function(data) {
+  plot <- list(
+    data = data,
+    ggplot = NULL,
+    geoms = NULL,
+    make = function() {
+      plot$ggplot + plot$geoms
+    },
+    save = function() {
+      saveRDS(plot, filename)
+      message(paste("The plot is saved at ", filename))
+    }
+  )
+  return(plot) #小寫plot，代表大的Plot底下的一個情境
+}
+
+
