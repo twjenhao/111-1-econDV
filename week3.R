@@ -73,7 +73,6 @@ ggplot(
       x=Time,
       y=Index1,
       color="red")
-    
     )
   
 
@@ -98,7 +97,7 @@ ggplot(
       color=IndexName
     )
   )
-_
+
 
 tidyr::pivot_wider(
   data=data1_long,
