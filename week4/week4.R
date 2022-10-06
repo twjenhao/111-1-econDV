@@ -22,12 +22,15 @@ plot = Plot(data=data)
 #--------------------------------------
   
 data$Britain$country="Britain"
+data
 data$Italy$country="Italy"
+data
 data$Spain$country="Spain"
+data
 dataAll = dplyr::bind_rows(
   data$Britain, data$Italy, data$Spain
-)
-
+)#將資料扁平化
+dataAll
 plot$dataAll = dataAll
 
 #--------------------------------------
@@ -91,4 +94,12 @@ plot$geoms2 = list(
   )
 )
 plot$ggplot+plot$geoms2
+
+
+
+
+
+
+
+
 
