@@ -440,7 +440,7 @@ plot$make()
 -   At every aesthetic element to be adjusted, attach `#input${aesthetic_name}` at the end of the line as:
 
 ```{r}
-plot = Plot$new(data.frame(x=c(1,2), y=c(5, -1)))
+plot = Plot(data.frame(x=c(1,2), y=c(5, -1)))
 plot$ggplot=ggplot(data=plot$data)
 plot$geoms= list(
   geom_point(

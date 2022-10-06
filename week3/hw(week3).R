@@ -5,12 +5,12 @@ googlesheets4::read_sheet(
 data3
 
 split(data3,data3$Country) -> data3_split
+library(ggplot2)
 
-
-ggplot()+
+ggplot()#最底層的圖+
   geom_point(data=data3_split$a,
     aes(
-      x=Total""Effect,
+      x=`Total Effect`,
       y=Characteristic),
     color="Pink",
     size=10,
@@ -83,8 +83,7 @@ ggplot()+
 
 
 
-data3_split$"b"
-data3_split$"a"
+
 
 
 #color (線框顏色): constant
