@@ -36,7 +36,8 @@ gg41
 
 gg41Width <- ggplot(
   data=data4,mapping=
-    aes(x=country,width=3*Volumn/sum(Volumn))
+    aes(x=country,width=
+          Volumn/sum(Volumn))
 )+
   geom_col(
     color="White",
