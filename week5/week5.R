@@ -8,7 +8,17 @@ listExample$objAdd2 = function(){
 }
 
 #Environment can be attached
-
+envExample = environment()
 envExample$obj1Add2()
 attach(envExample)
 search()
+
+
+plot = Plot(data.frame())
+
+
+
+
+
+
+

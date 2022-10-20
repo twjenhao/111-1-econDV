@@ -40,4 +40,6 @@ Plot <- function(data) {
   return(plot) #小寫plot，代表大的Plot底下的一個情境
 }
 
+econDV2::attachPlot()
+
 
