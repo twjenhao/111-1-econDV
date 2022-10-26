@@ -1,0 +1,9 @@
+#canvas畫布
+```{r}
+ggplot()
+  #layers
+  geom_...(data=...)+
+  geom_...(data=...)
+```
+
+ggplot()+
