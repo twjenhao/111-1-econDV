@@ -26,8 +26,21 @@ ggplot(data=marriageTaoYuanLate)+
   ) + coord_flip()
 
 #----------------------------------------
-
-
+googledrive::drive_deauth()
+googledrive::drive_download("https://drive.google.com/file/d/1Cd4paAOsEs8Rec-4o8VNh6MfsXMLo-qs/view?usp=sharing", 
+                            overwrite =T)
+eachTypeCompanyCapital_long = readRDS(
+  "eachTypeCompanyCapital_long.Rds"
+)
+ggplot(data=eachTypeCompanyCapital_long)+
+  geom_col(
+    mapping=aes(
+      x=`縣 市 別`,
+      y=CompanyTypeCapital, # 佔比的來源
+      fill=CompanyType
+    ),
+    position="fill" # 
+  )
 
 
   
