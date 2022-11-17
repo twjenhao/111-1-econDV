@@ -46,13 +46,37 @@ ggplot(data = data7sort)+
 #geom_segment(aes(x = 1971, y = 0, xend = 1978, yend = 1)
 #geom_vline(xintercept = 21,xintercept =30)
   
-ggdash()
 
 
+
+
+
+
+
+dataset <- read_excel("/Users/liurenhao/Documents/GitHub/111-1-econDV/111-1-econDV/week7/Exercise Data.xlsx",
+                      sheet="Sheet10",col_types = c("numeric","numeric", "numeric", "numeric")
+) -> data7
+
+#https://www.math.pku.edu.cn/teachers/lidf/docs/Rbook/html/_Rbook/summary-manip.html  
+
+#<問一>標題出現頻率如何更改(32)
+#<問二>可不可以從x數值資料找到切割點(37)
+
+tidyr::pivot_longer(
+  data = data7,
+  cols = 2:4, #以第一個column當觀測值基準，把後面資料壓成下面兩行
+  names_to = "country",
+  values_to = "data"
+) |>mutate(
+  year = as.numeric(year),
+  y = dplyr::case_when(country == "country A" ~ 0.5, country == "country B" ~ 1.5, country == "country C" ~ 2.5)
+) -> data7sort1
+
+class(data7sort1$year)
 
 
 plt=Plot()
-plt$ggplot = ggplot(data=data7sort)
+plt$ggplot = ggplot(data=data7sort1)
 plt$geom = 
   geom_tile(
     aes(
@@ -102,6 +126,6 @@ plt$annotation = list(
   )
 )
 
-plt$ggplot+plt$geom+plt$others+plt$annotation  #plt$scale+
+plt$ggplot+plt$geom+plt$scale+plt$others+plt$annotation
 
 
