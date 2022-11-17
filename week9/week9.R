@@ -1,7 +1,7 @@
 library(readxl)
 library(dplyr)
 library(targets)
-data9hw1 <- read.csv("/Users/liurenhao/Documents/GitHub/111-1-econDV/week9/econDV2作業1/工作表 2-表格 1.csv")
+data9hw1 <- read.csv("/Users/liurenhao/Documents/GitHub/111-1-econDV/111-1-econDV/week9/econDV2作業1/工作表 2-表格 1.csv")
 
 # https://web02.mof.gov.tw/njswww/WebMain.aspx?sys=100&funid=defjsptgl
 tidyr::pivot_longer(
