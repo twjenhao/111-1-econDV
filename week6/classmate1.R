@@ -41,6 +41,7 @@ tidyr::pivot_longer(
 library(dplyr)
 options(scipen=999)
 
+
 eachTypeCompanyCapital_long |>
   mutate(
     佔比 = (eachTypeCompanyCapital_long[[4]]/eachTypeCompanyCapital_long[[2]])*100

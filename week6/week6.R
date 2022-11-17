@@ -19,8 +19,8 @@ newCompaniestest = newCompanies |>
 select(newCompaniestest,-(2:17))->newCompaniestest2
 newCompaniestest2 = 
   dplyr::slice(newCompaniestest1,-(1:2))
-  names(newCompaniestest2)
-  
+names(newCompaniestest2)
+
 
 newCompaniestest2
 
@@ -57,7 +57,6 @@ plt$theme = list(
     panel.grid.major.y = element_line(color="#c4d1d7")
   )
 )
-
 
 
 
