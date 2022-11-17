@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 83976e04aea209d211ba5329cb0adaa6726d8d45
 library(ggplot2)
 library(showtext)
 library(econDV2)
@@ -18,42 +13,13 @@ theme_set(
     theme_classic()
 )
 # some handy tool to use later through out the class
-<<<<<<< HEAD
-ggenv=new.env() #創造一個新的環境
-=======
 ggenv=new.env()
->>>>>>> 83976e04aea209d211ba5329cb0adaa6726d8d45
 ggenv$gg <- list(
   dash = econDV2::ggdash,
   geom = econDV2::ggbrowse,
   aes = econDV2::ggaes
 )
-<<<<<<< HEAD
-attach(ggenv)#放到一個程式碼裡面叫gg
-
-
-Plot <- function(data) {
-  plot <- list(
-    data = data,
-    ggplot = NULL,
-    geoms = NULL,
-    make = function() {
-      plot$ggplot + plot$geoms
-    },
-    save = function() {
-      saveRDS(plot, filename)
-      message(paste("The plot is saved at ", filename))
-    }
-  )
-  return(plot) #小寫plot，代表大的Plot底下的一個情境
-}
-
-econDV2::attachPlot()
-
-
-=======
 attach(ggenv)
 
 
 Sys.setenv(CLIPR_ALLOW=TRUE)
->>>>>>> 83976e04aea209d211ba5329cb0adaa6726d8d45
