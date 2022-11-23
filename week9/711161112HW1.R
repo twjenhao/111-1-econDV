@@ -1,3 +1,10 @@
+library(readxl)
+library(dplyr)
+library(targets)
+library(ggplot2)
+library(econDV2)
+if(!require(showtext)) install.packages("showtext")
+showtext::showtext_auto()
 data9hw1 <- read.csv("/Users/liurenhao/Documents/GitHub/111-1-econDV/111-1-econDV/week9/econDV2作業1/工作表 2-表格 1.csv")
 # https://web02.mof.gov.tw/njswww/WebMain.aspx?sys=100&funid=defjsptgl
 
@@ -8,7 +15,7 @@ tidyr::pivot_longer(
 ) |> mutate(year=as.numeric(year)
 )  |> mutate(Export=as.numeric(Export))-> data9hw1_2
 
-
+plot=list()
 plot$ggplot <- ggplot(data = data9hw1_2 )
 plot$geoms <- list(geom_tile(aes(x=year,y=Product,fill=Export),colour="gray"))
 plot$themes <- list(theme(
@@ -38,3 +45,4 @@ g1+annotate("rect",
             ymin = 18.5, ymax = 17.5,
             alpha = .00001,colour = "pink")
 ggdash()
+
