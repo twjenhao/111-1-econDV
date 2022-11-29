@@ -11,9 +11,9 @@ data9hw1 <- read.csv("/Users/liurenhao/Documents/GitHub/111-1-econDV/111-1-econD
 tidyr::pivot_longer(
   data = data9hw1,
   cols = 2:20, 
-  names_to = "Product",values_to = "Export"
-) |> mutate(year=as.numeric(year)
-)  |> mutate(Export=as.numeric(Export))-> data9hw1_2
+  names_to = "Product",values_to = "Export") |> 
+  mutate(year=as.numeric(year)) |> 
+  mutate(Export=as.numeric(Export))-> data9hw1_2
 
 plot=list()
 plot$ggplot <- ggplot(data = data9hw1_2 )

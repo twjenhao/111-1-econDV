@@ -1,0 +1,68 @@
+library(readxl)
+library(dplyr)
+library(targets)
+library(ggplot2)
+library(econDV2)
+if(!require(showtext)) install.packages("showtext")
+showtext::showtext_auto()
+data12 <- read_xlsx("/Users/liurenhao/Documents/GitHub/111-1-econDV/111-1-econDV/week12/活頁簿2.xlsx", sheet = "每年")
+# https://stat.motc.gov.tw/mocdb/stmain.jsp?sys=100
+
+
+  
+data12 |> 
+  mutate(高雄港 = as.numeric(高雄港)) |>
+  mutate(基隆港 = as.numeric(基隆港)) |>
+  mutate(臺中港 = as.numeric(臺中港)) |>
+  mutate(臺北港 = as.numeric(臺北港)) |>
+  mutate(蘇澳港 = as.numeric(蘇澳港)) |>
+  mutate(安平港 = as.numeric(安平港)) |>
+  mutate(桃園空港 = as.numeric(桃園空港)) |>
+  mutate(總計 = as.numeric(總計)) -> data12_1
+ 
+data12_1[is.na(data12_1)] <- 0
+
+data12_1 |>
+  mutate(其他 = (基隆港+蘇澳港+安平港+桃園空港)/ 總計 ) |>
+  mutate(臺北港 = 臺北港 / 總計 ) |>
+  mutate(臺中港 = 臺中港 / 總計 ) |>
+  mutate(高雄港 = 高雄港 / 總計 )  -> data12_2
+
+
+data12_3 <- data12_2[,-2:-5]
+
+data12_4 <- data12_3[,-5:-7]
+
+data12_4
+tidyr::pivot_longer(
+  data = data12_4,
+  cols = 2:5, 
+  names_to = "港口",values_to = "貨運量佔比"
+) -> data12_5
+
+
+plot=list()
+plot$ggplot <- ggplot(data = data12_5,aes(x = 年度, y = 貨運量佔比))
+plot$geoms <-geom_bar(aes(fill = 港口),stat = "identity")
+
+plot$scale <-list(
+  scale_y_continuous(expand=c(0,0)),
+  scale_fill_manual(
+    limits = c("台中港","其他","台北港","高雄港"),
+    values = c("#0074e8", "#e3780c", "#6e0f3c","#5b2677"))
+)
+  
+
+plot$ggplot+plot$geoms+plot$scale
+
+
+
+
+
+
+ggplot(data = X, aes(x = 距離.公尺, y = 數量, fill = 設施)) +
+  geom_bar(stat = "identity")+
+  scale_x_continuous(breaks=seq(0,1000,200),limits=c(100,1100))+
+  labs(title = "房地產距離最近各宗教設施之距離分布圖",
+       subtitle = "2013-2019",
+       caption = "Source:本研究自行整理")
