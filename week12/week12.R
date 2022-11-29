@@ -63,7 +63,7 @@ plot$others <- list(
 
 plot$explain = list(
   labs(
-    title="各港口貨運量比較",
+    title="國際商港貨物裝卸量",
     subtitle="歷年比重變化",
     caption="資料來源：中華民國交通部"
   )
