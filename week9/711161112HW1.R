@@ -17,9 +17,16 @@ tidyr::pivot_longer(
 
 plot=list()
 plot$ggplot <- ggplot(data = data9hw1_2 )
-plot$geoms <- list(geom_tile(aes(x=year,y=Product,fill=Export),colour="gray"))
-plot$themes <- list(theme(
-  axis.ticks.y=element_blank()),scale_x_continuous(expand=c(0,0)),xlab(NULL),ylab(NULL))
+plot$geoms <- list(
+  geom_tile(aes(x=year,y=Product,fill=Export),
+            colour="gray"))
+
+plot$themes <- list(
+  theme(axis.ticks.y=element_blank()),
+  scale_x_continuous(expand=c(0,0)),
+  xlab(NULL),
+  ylab(NULL)
+  )
 plot$scale <- list(
   scale_fill_gradient2(
   limit=c(0,1),
