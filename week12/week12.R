@@ -19,50 +19,55 @@ data12 |>
   mutate(安平港 = as.numeric(安平港)) |>
   mutate(桃園空港 = as.numeric(桃園空港)) |>
   mutate(總計 = as.numeric(總計)) -> data12_1
+
  
 data12_1[is.na(data12_1)] <- 0
 
 data12_1 |>
-  mutate(其他 = (基隆港+蘇澳港+安平港+桃園空港)/ 總計 ) |>
-  mutate(臺北港 = 臺北港 / 總計 ) |>
-  mutate(臺中港 = 臺中港 / 總計 ) |>
-  mutate(高雄港 = 高雄港 / 總計 )  -> data12_2
+  mutate(其他 = (蘇澳港+安平港+臺中港+臺北港)/ 總計 ) |>
+  mutate(高雄港 = 高雄港 / 總計 ) |> 
+  mutate(基隆港 = 基隆港 / 總計 ) |>
+  mutate(桃園空港 = 桃園空港 / 總計 ) ->
+  data12_2
+
+data12_2
+data12_3 <- data12_2[,-2]
+data12_3 <- data12_3[,-4:-7]
 
 
-data12_3 <- data12_2[,-2:-5]
-
-data12_4 <- data12_3[,-5:-7]
-
-data12_4
 tidyr::pivot_longer(
-  data = data12_4,
+  data = data12_3,
   cols = 2:5, 
   names_to = "港口",values_to = "貨運量佔比"
-) -> data12_5
+) -> data12_4
 
 
 plot=list()
-plot$ggplot <- ggplot(data = data12_5,aes(x = 年度, y = 貨運量佔比))
+plot$ggplot <- ggplot(data = data12_4,aes(x = 年度, y = 貨運量佔比))
 plot$geoms <-geom_bar(aes(fill = 港口),stat = "identity")
+
+data12_4$港口 |> unique()
 
 plot$scale <-list(
   scale_y_continuous(expand=c(0,0)),
   scale_fill_manual(
-    limits = c("台中港","其他","台北港","高雄港"),
-    values = c("#0074e8", "#e3780c", "#6e0f3c","#5b2677"))
+    limits = c("高雄港","基隆港","桃園空港","其他"),
+    values = c("#ED90A4","#7EBA68","#6FB1E7", "#6a67654d"))
+  )
+
+plot$others <- list(
+  xlab(NULL),ylab(NULL),
+  scale_x_continuous(breaks = seq(2008,2021, by=2),
+                     labels=c(2008, 2010, 2012, 2014, 2016, 2018,2020))
+  )
+
+plot$explain = list(
+  labs(
+    title="各港口貨運量比較",
+    subtitle="歷年比重變化",
+    caption="資料來源：中華民國交通部"
+  )
 )
   
-
-plot$ggplot+plot$geoms+plot$scale
-
-
-
-
-
-
-ggplot(data = X, aes(x = 距離.公尺, y = 數量, fill = 設施)) +
-  geom_bar(stat = "identity")+
-  scale_x_continuous(breaks=seq(0,1000,200),limits=c(100,1100))+
-  labs(title = "房地產距離最近各宗教設施之距離分布圖",
-       subtitle = "2013-2019",
-       caption = "Source:本研究自行整理")
+plot$ggplot+plot$geoms+plot$scale+plot$others+plot$explain
+ggdash()
