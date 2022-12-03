@@ -44,22 +44,20 @@ tidyr::pivot_longer(
 
 plot=list()
 plot$ggplot <- ggplot(data = data12_4,aes(x = 年度, y = 貨運量佔比))
-plot$geoms <-geom_bar(aes(fill = 港口),stat = "identity")
+plot$geoms <- geom_area(aes(fill = 港口),stat = "identity")
 
 data12_4$港口 |> unique()
 
 plot$scale <-list(
-  scale_y_continuous(expand=c(0,0)),
+  scale_y_continuous(position = "right",expand=c(0,0)),
   scale_fill_manual(
-    limits = c("高雄港","基隆港","桃園空港","其他"),
-    values = c("#ED90A4","#7EBA68","#6FB1E7", "#6a67654d"))
-  )
-
-plot$others <- list(
-  xlab(NULL),ylab(NULL),
+    limits = c("基隆港","高雄港","其他","桃園空港"),
+    values = c("#ED90A4","#7EBA68","#6FB1E7", "#6a67654d")),
   scale_x_continuous(breaks = seq(2008,2021, by=2),
-                     labels=c(2008, 2010, 2012, 2014, 2016, 2018,2020))
-  )
+                     labels=c(2008, 2010, 2012, 2014, 2016, 2018,2020),
+                     expand=c(0,0))
+)
+plot$others <- list()
 
 plot$explain = list(
   labs(
@@ -70,4 +68,4 @@ plot$explain = list(
 )
   
 plot$ggplot+plot$geoms+plot$scale+plot$others+plot$explain
-ggdash()
+

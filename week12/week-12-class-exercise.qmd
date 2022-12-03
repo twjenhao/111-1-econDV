@@ -1,0 +1,76 @@
+---
+title: "week-12-exercise"
+format: html
+editor: visual
+---
+
+## Data Range
+
+![Data Range](https://www.economist.com/img/b/834/487/90/sites/default/files/20190112_WOC124.png){alt="Data Range"}
+
+```{r}
+df = data.frame(
+  year=1979:2018,
+  y=1
+)
+g2 <- ggplot(data=df) + geom_blank(aes(x=year, y=y))
+g2 
+```
+
+### compute breaks
+
+```{r}
+
+g2 |> ggplot_build() -> .g2
+.g2$data[[1]]$x |> range() -> xrange
+xSeq = xrange[[1]]:xrange[[2]]
+xSeq |> subset(xSeq %% 5 ==0) -> xSeqMod5
+breaks <- c(xrange, xSeqMod5) |> sort()
+breaks
+
+g2 + scale_x_continuous(breaks=breaks)
+```
+
+-   `breaks` depends on ggplot data
+
+### style instance
+
+What makes `style` as an instance from `Style` is its data dependency.
+
+```{r StyleTime}
+StyleTime = function(gg){
+  # data dependent computation
+  gg |> ggplot_build() -> .g2
+  .g2$data[[1]]$x |> range() -> xrange
+  xSeq = xrange[[1]]:xrange[[2]]
+  xSeq |> subset(xSeq %% 5 ==0) -> xSeqMod5
+  breaks <- c(xrange, xSeqMod5) |> sort()
+  
+  style=list()
+  
+  style$scale_x_continuous = function(...){
+    scale_x_continuous(breaks=breaks,...)
+  }
+  
+  return(style)
+}
+```
+
+```{r}
+df = data.frame(
+  year=1979:2018,
+  y=1
+)
+g <- ggplot(data=df) + geom_blank(aes(x=year, y=y))
+g 
+
+# Usage
+style = StyleTime(g)
+g + style$scale_x_continuous()
+
+# refine labels
+labels = breaks
+if(breaks[[2]]-breaks[[1]]==1) labels[[2]]=""
+if(breaks[[length(breaks)]]-breaks[[length(breaks)-1]]==1) labels[[length(labels)-1]]=""
+g + style$scale_x_continuous(labels=labels)
+```
