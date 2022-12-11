@@ -7,12 +7,13 @@ library(econDV2)
 if(!require(showtext)) install.packages("showtext")
 # 描述，if(!require(showtext))，if:如果，！:沒有，showtext套件的話，
 # require()會回傳true or false
-# install.packages("showtext")就安裝 showtex
+# install.packages("showtext")就安裝 showtext
 showtext::showtext_auto()
 library(readxl)
 url <- "https://github.com/twjenhao/111-1-econDV/blob/main/week13/%E6%B6%88%E8%B2%BB%E4%BD%94GDP%E6%AF%94%E9%87%8D.xlsx?raw=true"
 destfile <- "data13.xlsx"
 curl::curl_download(url, destfile)
+#如果上面沒有library就需要打curl::
 data13 <- read_excel(destfile)
 # OECD.Stat: https://stats.oecd.org/index.aspx
 
@@ -86,11 +87,13 @@ plot13$ggplot+plot13$geoms+plot13$others+plot13$explain+plot13$scale
 
 
 # ----------------------------------------------------------
-
+library(curl)
 library(readxl)
 url <- "https://github.com/twjenhao/111-1-econDV/blob/main/week13/%E6%B6%88%E8%B2%BB%E4%BD%94GDP%E6%AF%94%E9%87%8D.xlsx?raw=true"
 destfile <- "data13.xlsx"
-curl::curl_download(url, destfile)
+curl::curl_download(url, destfile) 
+#如果上面沒有library就需要打curl::
+curl_download(url, destfile)
 data132 <- read_excel(destfile)
 # OECD.Stat: https://stats.oecd.org/index.aspx
 
