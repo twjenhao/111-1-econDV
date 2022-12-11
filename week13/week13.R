@@ -9,7 +9,11 @@ if(!require(showtext)) install.packages("showtext")
 # require()會回傳true or false
 # install.packages("showtext")就安裝 showtex
 showtext::showtext_auto()
-data13 <- read_xlsx("/Users/liurenhao/Documents/GitHub/111-1-econDV/111-1-econDV/week13/消費佔GDP比重.xlsx")
+library(readxl)
+url <- "https://github.com/twjenhao/111-1-econDV/blob/main/week13/%E6%B6%88%E8%B2%BB%E4%BD%94GDP%E6%AF%94%E9%87%8D.xlsx?raw=true"
+destfile <- "data13.xlsx"
+curl::curl_download(url, destfile)
+data13 <- read_excel(destfile)
 # OECD.Stat: https://stats.oecd.org/index.aspx
 
 data13_1 <- t(data13)
