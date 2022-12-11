@@ -87,10 +87,13 @@ plot13$ggplot+plot13$geoms+plot13$others+plot13$explain+plot13$scale
 
 # ----------------------------------------------------------
 
-
-
-data132 <- read_xlsx("/Users/liurenhao/Documents/GitHub/111-1-econDV/111-1-econDV/week13/消費佔GDP比重.xlsx",sheet="sheet2")
+library(readxl)
+url <- "https://github.com/twjenhao/111-1-econDV/blob/main/week13/%E6%B6%88%E8%B2%BB%E4%BD%94GDP%E6%AF%94%E9%87%8D.xlsx?raw=true"
+destfile <- "data13.xlsx"
+curl::curl_download(url, destfile)
+data132 <- read_excel(destfile)
 # OECD.Stat: https://stats.oecd.org/index.aspx
+
 
 data132_1 <- t(data132)
 
