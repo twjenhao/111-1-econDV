@@ -3,7 +3,6 @@ library(ggpol)
 library(curl)
 
 
-utils::unzip(url, list = TRUE)
 url <- "https://github.com/twjenhao/111-1-econDV/blob/main/week15/111%E5%B9%B4%E7%9B%B4%E8%BD%84%E5%B8%82%E8%AD%B0%E5%93%A1%E9%81%B8%E8%88%89.xlsx?raw=true"
 # 在url最後要加這一段“?raw=true”執行下面程式才可以下載到檔案
 destfile15 <- "111年直轄市議員選舉.xlsx"
@@ -26,3 +25,4 @@ ggplot(data15) +
   scale_fill_manual(values = bt$colors, labels = bt$parties) +
   coord_fixed() + 
   theme_void()
+
