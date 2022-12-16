@@ -82,7 +82,7 @@ plot13$others <- list(
 )
 
 plot13$ggplot+plot13$geoms+plot13$others+plot13$explain+plot13$scale
-
+ggdash()
 
 
 
