@@ -15,10 +15,11 @@ party=factor(data15$推薦政黨,levels = c("民主進步黨","中國國民黨",
 party
 data15$推薦政黨
 ggplot(data15) + 
-  geom_parliament(aes(seats = seats, fill = party), color = "black") #+
-  # scale_fill_manual(values = data15$Group, labels = data15$推薦政黨) +
-  # coord_fixed() + 
-  # theme_void()
+  geom_parliament(aes(seats = seats, fill = party), color = "black") +
+  scale_fill_manual(values = data15$Group, labels = data15$推薦政黨) +
+  coord_fixed() + 
+  theme_void()+
+  theme()
 
 
 

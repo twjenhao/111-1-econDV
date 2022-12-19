@@ -106,9 +106,9 @@ as.data.frame(data132_1)->data132_2
 class(data132_2)
 colnames(data132_2)[1:4] <- list("Germany","USA","Japan","Taiwan")
 data132_3 <- data132_2[-1,]
-data132_4 <- data.frame(year=c(1971:2021))
+data132_4 <- data.frame(year=c(1970:2021))
 class(data132_4)
-cbind(data132_4,data132_3) ->data132_5
+cbind(data132_4,data132_3) -> data132_5
 rownames(data132_5)[1:51] <- c(1:51)
 
 tidyr::pivot_longer(
