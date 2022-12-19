@@ -1,9 +1,10 @@
-data153 <- read_xlsx("/Users/liurenhao/Documents/TaipeiuniversityNote/EconmicVisual/111-1-econDV/week15/消費佔GDP比重.xlsx",sheet="sheet2")
+url <- "https://github.com/twjenhao/111-1-econDV/blob/main/week15/%E6%B6%88%E8%B2%BB%E4%BD%94GDP%E6%AF%94%E9%87%8D.xlsx?raw=true"
+destfile153 <- "消費佔GDP比重.xlsx"
+curl::curl_download(url, destfile153)
+data15 <- read_excel(destfile153)
 # OECD.Stat: https://stats.oecd.org/index.aspx
 
 data153_1 <- t(data153)
-
-
 class(data153_1)
 as.data.frame(data153_1)->data153_2
 class(data153_2)
@@ -58,4 +59,4 @@ plot153$others <- list(
 )
 
 plot153$ggplot+plot153$geoms+plot153$others+plot153$explain+plot153$scale
-
+ggdash()
