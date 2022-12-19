@@ -27,8 +27,7 @@ data153_6 |>
 
 plot153=list()
 plot153$ggplot <- ggplot(data = data153_7,aes(x = year, y = 消費占GDP成長率))
-plot153$geoms <- list(geom_line(aes(colour = Country),
-),
+plot153$geoms <- list(geom_line(aes(colour = Country ),linewidth=1.5),
 geom_point(size=0.5,aes(colour = Country))
 )
 
@@ -60,3 +59,4 @@ plot153$others <- list(
 
 plot153$ggplot+plot153$geoms+plot153$others+plot153$explain+plot153$scale
 ggdash()
+
