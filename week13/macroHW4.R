@@ -90,7 +90,7 @@ ggdash()
 
 
 
-data132 <- read_xlsx("/Users/liurenhao/Documents/GitHub/111-1-econDV/111-1-econDV/week13/消費佔GDP比重.xlsx",sheet="sheet2")
+data132 <- read_xlsx("/Users/liurenhao/Documents/TaipeiuniversityNote/EconmicVisual/111-1-econDV/week15/消費佔GDP比重.xlsx",sheet="sheet2")
 # OECD.Stat: https://stats.oecd.org/index.aspx
 
 data132_1 <- t(data132)
@@ -132,7 +132,7 @@ geom_point(size=0.5,aes(colour = Country))
 plot132$scale <-list(
   scale_x_continuous(
     expand=c(0,0),
-    breaks = c(1984,seq(1994,2015,by=10),2021)),
+    breaks = c(1984,seq(1994,2015,by=10),2008,2021)),
   scale_y_continuous(expand=c(0,0),
                      position="right",
                      breaks = c(0,seq(-0.2,0.9,by=0.04))), #seq(0.4,0.7,by=0.1)
@@ -141,8 +141,8 @@ plot132$scale <-list(
 
 plot132$explain = list(
   labs(
-    title="Growth rate ",
-    subtitle="Households and NPISHs final consumption expenditure",
+    title="消費是否會受到景氣波動的影響",
+    subtitle="台灣人與美國人之間的差異",
     caption="Source: OECD, 中華民國主計處"
   )
 )
@@ -150,8 +150,8 @@ plot132$explain = list(
 plot132$others <- list(
   xlab(NULL),ylab(NULL),
   theme(legend.position="left",
-        plot.title = element_text(hjust=-0.1),
-        plot.subtitle = element_text(hjust=0.5)
+        plot.title = element_text(hjust=0),
+        plot.subtitle = element_text(hjust=0)
   )
 )
 

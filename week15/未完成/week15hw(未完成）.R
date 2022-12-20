@@ -39,3 +39,4 @@ ggplot(bt) +
   # scale_fill_manual(values = bt$colors, labels = bt$parties) +
   coord_fixed() + 
   theme_void()
+
