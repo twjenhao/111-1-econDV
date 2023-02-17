@@ -6,14 +6,11 @@ library(econDV2)
 library(readxl)
 showtext::showtext_auto()
 
-
-
 ####讀取資料####
 url <- "https://github.com/twjenhao/111-1-econDV/blob/main/week09/econDV2%E4%BD%9C%E6%A5%AD1/%E4%B8%AD%E5%9C%8B%E5%87%BA%E5%8F%A3%E8%B3%87%E6%96%99%E5%8E%9F%E5%A7%8B%E6%AA%94.csv?raw=true&quot";
 destfile9 <- "中國出口資料原始檔.csv"
 curl::curl_download(url, destfile9)
 data9 <- read.csv(destfile9)
-
 
 
 ####資料整理####
@@ -69,9 +66,9 @@ plot$themes <- list(
   )
 plot$scale <- list(
   scale_fill_gradient2(
-  limit=c(0,1),
+ limit=c(0,1),
   low = "white",
-  high="#f00000"),
+  high="#f00000") ,
   scale_y_discrete(limits=c("其他出口品",'基本金屬及其製品','紡織品','塑膠、橡膠及其製品','化學品','光學及精密儀器；鐘錶；樂器','機械及電機設備')
                    ))
 plot$explain = list(

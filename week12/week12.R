@@ -5,7 +5,7 @@ library(ggplot2)
 library(econDV2)
 if(!require(showtext)) install.packages("showtext")
 showtext::showtext_auto()
-data12 <- read_xlsx("/Users/liurenhao/Documents/GitHub/111-1-econDV/111-1-econDV/week12/活頁簿2.xlsx", sheet = "每年")
+data12 <- read_xlsx("/Users/liurenhao/Documents/TaipeiuniversityNote/EconmicVisual/111-1-econDV/week12/活頁簿2.xlsx", sheet = "每年")
 # https://stat.motc.gov.tw/mocdb/stmain.jsp?sys=100
 
 
